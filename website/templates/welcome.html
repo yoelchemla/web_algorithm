@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Welcome{% endblock %}
+{% block content%}
+<h1>what will be the size of the array you want? what is the target?</h1>
+<form method="POST" action="/input-numbers">
+    <div class="form-group">
+      <label for="sizeOfArray">Size of the array</label>
+      <input
+        type="sizeOfArray"
+        class="form-control"
+        id="sizeOfArray"
+        name="sizeOfArray"
+        placeholder="Enter size of array"
+      />
+    </div>
+    <div class="form-group">
+        <label for="sizeOfArray">Target</label>
+        <input
+          type="target"
+          class="form-control"
+          id="target"
+          name="target"
+          placeholder="Enter target"
+        />
+      </div>
+    <br />
+    <button type="submit"  class="btn btn-primary">Submit</button>
+</form>        
+{% endblock %}

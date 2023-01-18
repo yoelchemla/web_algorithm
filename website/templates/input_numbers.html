@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block title %}input numbers{% endblock %}
+{% block content%}
+<h1>the size you choose it {{number}} and the target is {{target}}</h1>
+<form method="POST" action="/res">
+  <label for="sizeOfArray">Enter numbers for the array:</label>
+    {% for i in range (number) %}
+    <div class="form-group">
+      <input
+        style="width: 200px"
+        type="numberForArray"
+        class="form-control"
+        name="the {{i}} number"
+        placeholder="Enter number"
+      />
+    </div>
+    {% endfor %}
+    <input type="hidden" id="catch" name="catch" value="{{target}}">
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>        
+{% endblock %}
